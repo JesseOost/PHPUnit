@@ -6,7 +6,9 @@ use PHPUnit\Framework\TestCase;
 
 class CalculatorTest extends TestCase
 {
-    /** @test */
+    /**
+     * @covers Calculator::CalculateAddition
+     */
     public function TestCalculateAddition(){
         $calculator = new Calculator();
         $result1 = $calculator->add(20,5);
@@ -20,7 +22,9 @@ class CalculatorTest extends TestCase
         $this->assertSame(664, $result4);
     }
 
-    /** @test */
+    /**
+     * @covers Calculator::CalculateSubtraction
+     */
     public function TestCalculateSubtraction(){
         $calculator = new Calculator();
         $result1 = $calculator->subtract(20,5);
